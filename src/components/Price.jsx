@@ -2,14 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PriceCard from "./PriceCard";
 
-const firstPlane = {
-  price: "5 میلیون",
-  name: "پکیج اقتصادی",
-  speed: "2",
-  item: "بدون مشاوره کسب و کار آنلاین",
-  finish: "5 روز",
-  support: "3 ماه",
-};
+
 const secondPlane = {
   price: "9 میلیون",
   name: "پکیج عادی",
@@ -41,20 +34,9 @@ const Container = styled.div`
 `;
 
 function Price() {
-  const smallScreen = window.screen.width <= 480 ? false : true;
 
   return (
     <Container>
-      {smallScreen && (
-        <PriceCard
-          price={firstPlane.price}
-          name={firstPlane.name}
-          speed={firstPlane.speed}
-          item={firstPlane.item}
-          finish={firstPlane.finish}
-          support={firstPlane.support}
-        />
-      )}
       <PriceCard
         price={secondPlane.price}
         name={secondPlane.name}
