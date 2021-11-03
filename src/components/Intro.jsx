@@ -3,14 +3,15 @@ import styled from "styled-components";
 import designer from "../assets/images/undraw_designer_life_re_6ywf.svg";
 import AnimatedShapes from "./AnimatedShapes";
 
-
 const Container = styled.div`
   height: calc(100vh - 65px);
   box-sizing: border-box;
-  /* background-color: crimson; */
   display: flex;
   padding: 20px;
   overflow: hidden;
+  @media only screen and (max-width: 480px) {
+    flex-flow: column wrap;
+  }
 `;
 
 const Right = styled.div`
@@ -19,12 +20,20 @@ const Right = styled.div`
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width : 480px){
+    width: 100%;
+    height: 100%;
+  }
 `;
 const Title = styled.h1`
   font-size: 60px;
   line-height: 1.2em;
   width: 80%;
   text-align: center;
+  @media only screen and (max-width : 480px){
+    width: 100%;
+    font-size: 40px;
+  }
 `;
 const Desc = styled.p`
   font-size: 20px;
@@ -52,6 +61,9 @@ const Left = styled.div`
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`

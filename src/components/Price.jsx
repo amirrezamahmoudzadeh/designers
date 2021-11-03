@@ -33,19 +33,28 @@ const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
   box-sizing: border-box;
+  @media only screen and (max-width: 480px) {
+    flex-flow: column wrap;
+    height: auto;
+    margin-top: 1rem;
+  }
 `;
 
 function Price() {
+  const smallScreen = window.screen.width <= 480 ? false : true;
+
   return (
     <Container>
-      <PriceCard
-        price={firstPlane.price}
-        name={firstPlane.name}
-        speed={firstPlane.speed}
-        item={firstPlane.item}
-        finish={firstPlane.finish}
-        support={firstPlane.support}
-      />
+      {smallScreen && (
+        <PriceCard
+          price={firstPlane.price}
+          name={firstPlane.name}
+          speed={firstPlane.speed}
+          item={firstPlane.item}
+          finish={firstPlane.finish}
+          support={firstPlane.support}
+        />
+      )}
       <PriceCard
         price={secondPlane.price}
         name={secondPlane.name}

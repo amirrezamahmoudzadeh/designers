@@ -14,6 +14,9 @@ const Right = styled.div`
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 const Title = styled.h3`
   font-size: 30px;
@@ -32,6 +35,10 @@ const Left = styled.div`
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width : 480px){
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const List = styled.ul`

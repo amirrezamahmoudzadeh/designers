@@ -8,6 +8,9 @@ const Container = styled.div`
   height: 100vh;
   overflow: hidden;
   box-sizing: border-box;
+  @media only screen and (max-width: 480px) {
+    flex-flow: column wrap;
+  }
 `;
 
 const Right = styled.div`
@@ -16,6 +19,9 @@ const Right = styled.div`
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
@@ -28,11 +34,20 @@ const Left = styled.div`
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width : 480px){
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Title = styled.h3`
   font-size: 50px;
+  text-align: center;
   margin-bottom: 10rem;
+  @media only screen and (max-width : 480px){
+    width: 100%;
+    font-size: 30px;
+  }
 `;
 
 const Desc = styled.p`
@@ -40,6 +55,10 @@ const Desc = styled.p`
   width: 90%;
   line-height: 2rem;
   text-align: center;
+  @media only screen and (max-width : 480px){
+    width: 90%;
+    font-size: 10px;
+  }
 `;
 
 function Feature() {
